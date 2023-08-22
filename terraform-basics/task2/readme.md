@@ -6,7 +6,7 @@ cat vars.tfvars
 ```
 
 ```bash
-terraform apply -auto-approve 
+terraform apply -var-file vars.tfvars  -auto-approve 
 ```
 
 ```bash
