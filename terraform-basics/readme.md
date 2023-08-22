@@ -1,4 +1,4 @@
 # Terraform Basics
 
-- [Simple infrastructure](/task1)
-- [Variables](/task2)
+- [Simple infrastructure](./task1)
+- [Variables](./task2)
