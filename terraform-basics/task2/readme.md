@@ -1,8 +1,9 @@
-# Variables
+# Variables and Outputs
 
 ```bash
 cat variables.tf
 cat vars.tfvars
+cat outputs.tf
 ```
 
 ```bash
