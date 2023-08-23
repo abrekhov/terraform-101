@@ -1,3 +1,4 @@
 # Terraform 101
 
-- [Terraform Basics](terraform-basics/)
+- [Terraform Basics](lesson-1/)
+- [Terraform Advanced](lesson-2/)
