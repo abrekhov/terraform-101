@@ -4,7 +4,7 @@ resource "yandex_vpc_network" "network" {
 
 resource "yandex_vpc_subnet" "net-a" {
   name           = "net-a"
-  zone           = "il1-b"
+  zone           = "il1-a"
   network_id     = yandex_vpc_network.network.id
   v4_cidr_blocks = ["10.0.10.0/24"]
 }
