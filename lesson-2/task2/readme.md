@@ -89,3 +89,7 @@ Transfer env variables to [github actions secrets](https://github.com/abrekhov/t
 Make some changes to infrastructure in new branch and open PR. Wait pipeline to succeed and take a look at issues comment to see the plan.
 
 ![GH_ACTIONS_PR](./github_actions_pr.png)
+
+Merge new branch to main and wait pipeline to apply tf manifest.
+
+![GH_ACTIONS_APPLY](./github_actions_apply.png)
