@@ -16,6 +16,10 @@ resource "yandex_compute_instance" "vm" {
   }
   network_interface {
     subnet_id = yandex_vpc_subnet.net-a.id
+    nat       = true
+  }
+  metadata = {
+    ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
   }
 
 }
