@@ -1,6 +1,6 @@
 # Terraform with Github Actions
 
-## Init
+## Init (from previos step)
 
 ```bash
 yc iam service-account create --name sa-tf
@@ -23,7 +23,7 @@ yc iam key create \
 . ./init-env.sh
 ```
 
-## Main
+## Set encrypted bucket for remote tf state (from previous step)
 
 Let's create S3 encypted bucket for storing terraform state.
 
@@ -80,16 +80,9 @@ yc iam access-key create --service-account-id $SA_ID --description "for storing 
 
 ```bash
 . ./init-env.sh
-
-terraform init -migrate-state # optional. If you already had some local state
-terraform init
-terraform plan
 ```
 
-```bash
-terraform apply -auto-approve
-```
+Transfer env variables to [github actions secrets](https://github.com/abrekhov/terraform-101/settings/secrets/actions).
 
-```bash
-terraform destroy -auto-approve
-```
+![GH_ACTIONS_SECRETS](./github_actions_secrets.png)
+
