@@ -3,7 +3,7 @@ name: Deploy Infrastructure
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   tf_fmt:
