@@ -86,3 +86,6 @@ Transfer env variables to [github actions secrets](https://github.com/abrekhov/t
 
 ![GH_ACTIONS_SECRETS](./github_actions_secrets.png)
 
+Make some changes to infrastructure in new branch and open PR. Wait pipeline to succeed and take a look at issues comment to see the plan.
+
+![GH_ACTIONS_PR](./github_actions_pr.png)
