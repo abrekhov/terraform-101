@@ -16,6 +16,7 @@ env:
   YC_CLOUD_ID: ${{ secrets.YC_CLOUD_ID }}
   YC_FOLDER_ID: ${{ secrets.YC_FOLDER_ID }}
   YC_SERVICE_ACCOUNT_KEY_FILE: ${{ secrets.YC_SERVICE_ACCOUNT_KEY_FILE }}
+  TF_VAR_sshkey: ${{ secrets.TF_VAR_sshkey }}
 
 jobs:
   terraform:
