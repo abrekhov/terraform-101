@@ -12,7 +12,7 @@ resource "yandex_compute_instance" "vm" {
   resources {
     core_fraction = 100
     cores         = 16
-    memory        = "number"
+    memory        = 16
   }
   network_interface {
     subnet_id = yandex_vpc_subnet.net-a.id

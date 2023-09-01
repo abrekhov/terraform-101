@@ -90,7 +90,7 @@ Add protection rules for main branch to prevent PR to be merged before actions s
 
 ![GH_ACTIONS_PROTECTION](./github_actions_protection.png)
 
-Make some changes to infrastructure in new branch and open PR. Wait pipeline to succeed and take a look at issues comment to see the plan.
+Make some changes to infrastructure in new branch and open PR. Wait pipeline to succeed and take a look at issues comment to see the plan. (Optional) Try to make some error (ex. set memory = "number") and commit on PR. To see that failed checks will prevent merging.
 
 ![GH_ACTIONS_PR](./github_actions_pr.png)
 
