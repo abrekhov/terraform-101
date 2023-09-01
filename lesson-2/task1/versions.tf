@@ -9,7 +9,7 @@ terraform {
   backend "s3" {
     endpoint         = "https://storage.il.nebius.cloud/"
     bucket           = "your-tf-bucket"
-    key              = "terraform-state-prod/tf-state"
+    key              = "terraform-state-prod/task1"
     region           = "il1"
     force_path_style = true
 

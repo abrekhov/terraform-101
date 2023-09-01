@@ -60,7 +60,7 @@ terraform {
   backend "s3" {
     endpoint         = "https://storage.il.nebius.cloud/"
     bucket           = "your-tf-bucket"
-    key              = "terraform-state-prod"
+    key              = "terraform-state-prod/task1"
     region           = "il1"
     force_path_style = true
 
@@ -88,6 +88,12 @@ terraform plan
 
 ```bash
 terraform apply -auto-approve
+```
+
+Check connection with created key
+
+```bash
+ssh -i id_rsa ubuntu@output_ip
 ```
 
 ```bash
