@@ -14,6 +14,9 @@ resource "yandex_compute_instance" "vm" {
     cores         = 16
     memory        = 16
   }
+
+  allow_stopping_for_update = true
+
   network_interface {
     subnet_id = yandex_vpc_subnet.net-a.id
     nat       = true
