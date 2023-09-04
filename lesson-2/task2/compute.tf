@@ -11,8 +11,8 @@ resource "yandex_compute_instance" "vm" {
   }
   resources {
     core_fraction = 100
-    cores         = 16
-    memory        = 16
+    cores         = 2
+    memory        = 8
   }
 
   allow_stopping_for_update = true

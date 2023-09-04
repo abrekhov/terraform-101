@@ -43,6 +43,8 @@ yc kms symmetric-key create --name kms-tf-state --default-algorithm aes-256
 yc resource-manager folder add-access-binding $FOLDER_ID  --role storage.uploader --subject serviceAccount:$SA_ID 
 yc resource-manager folder add-access-binding $FOLDER_ID  --role storage.viewer --subject serviceAccount:$SA_ID 
 yc resource-manager folder add-access-binding $FOLDER_ID  --role kms.keys.encrypterDecrypter --subject serviceAccount:$SA_ID 
+yc resource-manager folder add-access-binding $FOLDER_ID  --role compute.admin --subject serviceAccount:$SA_ID 
+yc resource-manager folder add-access-binding $FOLDER_ID  --role vpc.admin --subject serviceAccount:$SA_ID 
 ```
 
 Set remote backend S3 as below:
