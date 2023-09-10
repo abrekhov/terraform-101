@@ -116,6 +116,11 @@ resource "yandex_compute_instance" "vm" {
   zone        = yandex_vpc_subnet.net-a.zone
   platform_id = "standard-v3"
   ...
+  network_interface {
+    subnet_id = yandex_vpc_subnet.net-a.id
+    nat       = count.index == 0 ? true : false # an example of ternary operator
+  }
+  ...
 }
 
 # outputs.tf

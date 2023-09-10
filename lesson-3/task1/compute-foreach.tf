@@ -12,7 +12,7 @@ resource "tls_private_key" "zone_b_vms" {
 
 resource "yandex_lockbox_secret_version" "ssh-private-keys-version" {
   secret_id = yandex_lockbox_secret.ssh-private-keys.id
-  dynamic "entries" {
+  dynamic "entries" { # using dynamic block for loop through all vms
     for_each = var.zone_b_vms
     content {
       key        = "ssh-private-key-${entries.value.name}"
