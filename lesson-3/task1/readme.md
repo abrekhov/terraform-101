@@ -1,4 +1,4 @@
-# Loops
+# Code reuse (loops, conditions)
 
 ## Init (previous lesson setup)
 
