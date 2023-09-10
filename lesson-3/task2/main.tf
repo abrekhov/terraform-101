@@ -4,9 +4,12 @@ module "cloud" {
   organization_id    = "fhiebhq3nt2s69cuhrmt"
   billing_account_id = "dih9uo8e4vkgemetvia8"
 
+  for_each = {
+    for cloud in var.clouds : cloud.name => cloud
+  }
+
   cloud = {
-    name        = "cloud-one"
-    description = "One cloud"
+    name = each.value.name
   }
 
 
