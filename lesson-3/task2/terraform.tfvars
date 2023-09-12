@@ -1,5 +1,0 @@
-clouds = [
-  {
-    name = "cloud"
-  },
-]

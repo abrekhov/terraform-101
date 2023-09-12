@@ -4,12 +4,8 @@ module "cloud" {
   organization_id    = "fhiebhq3nt2s69cuhrmt"
   billing_account_id = "dih9uo8e4vkgemetvia8"
 
-  for_each = {
-    for cloud in var.clouds : cloud.name => cloud
-  }
-
   cloud = {
-    name = each.value.name
+    name = "client-company-one"
   }
 
 
@@ -54,6 +50,38 @@ module "cloud" {
         {
           folder_name = "prod-folder"
           roles       = ["container-registry.images.pusher", "logging.reader", "monitoring.viewer"]
+        }
+      ]
+      members = ["f081lpoptnbkbmf8nq9b"] # user_ids
+    },
+    {
+      name        = "clients"
+      description = "Clients role"
+      cloud_roles = ["viewer"]
+      folder_roles = [
+        {
+          folder_name = "prod-folder"
+          roles       = ["viewer"]
+        },
+        {
+          folder_name = "infra-folder"
+          roles       = ["viewer"]
+        }
+      ]
+      members = ["f081lpoptnbkbmf8nq9b"] # user_ids
+    },
+    {
+      name        = "engineers"
+      description = "Engineer role"
+      cloud_roles = ["viewer"]
+      folder_roles = [
+        {
+          folder_name = "prod-folder"
+          roles       = ["viewer"]
+        },
+        {
+          folder_name = "infra-folder"
+          roles       = ["viewer"]
         }
       ]
       members = ["f081lpoptnbkbmf8nq9b"] # user_ids
